@@ -1,0 +1,35 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        #array = []
+        #if x != abs(x):
+         #   return False
+        #elif x == 10 or x == 100 or x == 1000:
+         #   return False
+        #while x != 0:
+         #  y = x % 10
+          #  array.append(y)
+           # x = x// 10
+        #sum = 0
+        #i = 0
+        #k = 1
+        #for cnt, n in enumerate(array):
+         #   sum += array[cnt] * (10**(len(array) - cnt - 1))
+        #if array[-1]:
+         # sum += array[-1]
+        #if sum == x:
+         #   return [True, sum, x]
+        #else:
+         #   return False, sum
+    
+    
+            rev = 0
+            init_n = x
+            if( x < 0):
+              return False
+            while x != 0:
+                    rev = (rev*10) +  x % 10#instead of array here we multiply with 10 till loop ends- smort
+                    x = x // 10
+    
+            if(rev == init_n):
+                       return True
+            return False
