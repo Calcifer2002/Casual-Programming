@@ -1,0 +1,15 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        dict = {}
+        for k in nums:
+            if k in dict:
+                dict[k] +=1
+            else:
+                dict[k] = 1
+        for no in dict:
+            if dict[no] == 1:
+                pass
+            elif dict[no] != 1 :
+                return True
+            else:
+                return False
